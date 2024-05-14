@@ -1,4 +1,4 @@
-import mongoose from "../config/mongoose.config.js";
+import mongoose from "mongoose";
 
 const categorySchema = mongoose.Schema({
   name: String,
