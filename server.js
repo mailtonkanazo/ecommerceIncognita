@@ -6,11 +6,13 @@ import express from "express";
 import Product from "./models/products.js";
 
 const app = express();
+
 app.use(express.json());
 dotenv.config();
 connectToDataBase();
 
 app.use(express.json());
+
 app.get("/api/product", productsControllers.list);
 app.post("/api/product", productsControllers.create);
 app.get("/api/category", categoryControllers.categoryList);
