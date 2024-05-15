@@ -1,15 +1,12 @@
+import "dotenv/config";
+
 import productsControllers from "./controllers/productsControllers.js";
 import categoryControllers from "./controllers/categoryControllers.js";
-import dotenv from "dotenv";
-import connectToDataBase from "./config/mongoose.config.js"
+
 import express from "express";
 import Product from "./models/products.js";
 
 const app = express();
-
-app.use(express.json());
-dotenv.config();
-connectToDataBase();
 
 app.use(express.json());
 
