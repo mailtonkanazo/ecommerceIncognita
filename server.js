@@ -4,7 +4,7 @@ import productsControllers from "./controllers/productsControllers.js";
 import categoryControllers from "./controllers/categoryControllers.js";
 
 import express from "express";
-import Product from "./models/products.js";
+import Product from "./models/Product.js";
 
 const app = express();
 
