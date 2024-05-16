@@ -1,6 +1,7 @@
 import Product from "../models/products.js";
 
 async function list(req, res) {
+  //tomar lista de productos
   try {
     const productos = await Product.find();
     res.json(productos);
@@ -10,10 +11,11 @@ async function list(req, res) {
 }
 
 async function create(req, res) {
+  //crear un producto
   try {
     const newProduct = await product.create({
       name: req.body.name,
-      decription: req.body.descrption,
+      description: req.body.descrption,
       ref: req.body.ref,
       size: req.body.size, // caracteristica añadida jct
       colour: req.body.colour,
