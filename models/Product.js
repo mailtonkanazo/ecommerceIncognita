@@ -1,10 +1,11 @@
-import mongoose from "mongoose";
+import mongoose from "../config/mongoose.config.js";
 
 const productSchema = mongoose.Schema({
   name: String,
-  decription: String,
+  description: String,
   ref: Number,
-  colour: String,
+  size: String,
+  color: String,
   stock: Number,
   price: Number,
 });
