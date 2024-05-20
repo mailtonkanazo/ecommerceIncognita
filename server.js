@@ -8,7 +8,13 @@ import Product from "./models/Product.js";
 
 const app = express();
 
+function middlewareApplication(req, res) {
+  console.log("Hey, recibimos tu pedido") 
+}
+
 app.use(express.json());
+app.use(middlewareApplication);
+
 
 //Rutas de product
 app.get("/api/product", productsControllers.list);
@@ -20,6 +26,9 @@ app.delete("/api/product/:id", productsControllers.deleteProduct);
 //Rutas de category
 app.get("/api/category", categoryControllers.categoryList);
 app.post("/api/category", categoryControllers.categoryCreate);
+
+//Ruta Privada
+app.post("/api7product/profile", expressjwt({ algoritmos: ["HS256"], secret: process.env.JWT_SECRET}), userController.profile);
 
 app.listen(3000, () => {
   console.log("servidor corriendo en el puerto 3000");
