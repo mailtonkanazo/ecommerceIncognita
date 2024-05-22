@@ -5,6 +5,7 @@ import categoryControllers from "./controllers/categoryControllers.js";
 import purchasesControllers from "./controllers/purchasesControllers.js";
 import express from "express";
 import Product from "./models/Product.js";
+import usersControllers from "./controllers/usersControllers.js";
 
 const app = express();
 
@@ -15,6 +16,12 @@ function middlewareApplication(req, res) {
 app.use(express.json());
 app.use(middlewareApplication);
 
+//Rutas de users
+app.get("/api/users", usersControllers.list);
+app.get("/api/users/:id", usersControllers.listOne);
+app.post("/api/users", usersControllers.create);
+app.patch("/api/users/:id", usersControllers.update);
+app.delete("/api/users/:id", usersControllers.deleteUsers);
 
 //Rutas de product
 app.get("/api/product", productsControllers.list);
@@ -33,7 +40,6 @@ app.get("/api/payment/:id", paymentControllers.listOne);
 app.post("/api/payment", paymentControllers.create);
 app.patch("/api/payment/:id", paymentControllers.update);
 app.delete("/api/payment/:id", paymentControllers.deletePayment);
-
 
 //Rutas de category
 app.get("/api/category", categoryControllers.categoryList);

@@ -8,6 +8,6 @@ const paymentSchema = mongoose.Schema({
   //Billing Information ------ 
 });
 
-const Payment = mongoose.model("Product", paymentSchema);
+const Payment = mongoose.model("Payment", paymentSchema);
 
 export default Payment;

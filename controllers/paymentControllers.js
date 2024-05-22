@@ -40,7 +40,7 @@ async function create(req, res) {
 //Modificar parcialmente un producto
 async function update(req, res) {
   try {
-    const productModified = await Product.findById(req.params.id);
+    const paymentModified = await Product.findById(req.params.id);
     paymentModified.paymentmethod = req.body.paymentmethod || paymentModified.paymentmethod;
     paymentModified.cardnumber = req.body.cardnumber || paymentModified.cardnumber;
     paymentModified.dateofexpiry = req.body.dateofexpiry || paymentModified.dateofexpiry;
