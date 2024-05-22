@@ -16,6 +16,13 @@ function middlewareApplication(req, res) {
 app.use(express.json());
 app.use(middlewareApplication);
 
+//Rutas de admin
+app.get("/api/admin", adminControllers.list);
+app.get("/api/admin/:id", adminControllers.listOne);
+app.post("/api/admin", adminControllers.create);
+app.patch("/api/admin/:id", adminControllers.update);
+app.delete("/api/admin/:id", adminControllers.deleteAdmin);
+
 //Rutas de users
 app.get("/api/users", usersControllers.list);
 app.get("/api/users/:id", usersControllers.listOne);

@@ -1,4 +1,4 @@
-import Users from "../models/payment.js";
+import Users from "../models/users.js";
 
 //Solicitar lista de todos los usuarios
 async function list(req, res) {
@@ -17,7 +17,7 @@ async function listOne(req, res) {
     const usersSolicitado = await User.findById(usersId);
     res.status(200).json(usersSolicitado);
   } catch (err) {
-    console.error("Error al obtener el metodo de pago:", err);
+    console.error("Error al obtener el usuario:", err);
   }
 }
 
