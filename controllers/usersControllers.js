@@ -64,7 +64,7 @@ async function update(req, res) {
 //Eliminar un usuario
 async function deleteUsers(req, res) {
   try {
-    await Payment.findByIdAndDelete(req.params.id);
+    await Users.findByIdAndDelete(req.params.id);
     res.json("Usuario Eliminado");
   } catch {
     res.status(500).json({ error: "Server Error", message: err.message });
