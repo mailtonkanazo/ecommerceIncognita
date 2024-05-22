@@ -27,6 +27,13 @@ app.delete("/api/product/:id", productsControllers.deleteProduct);
 app.get("/api/purchases", purchasesControllers.list);
 app.post("/api/purchases", purchasesControllers.create);
 
+//Rutas de payment
+app.get("/api/payment", paymentControllers.list);
+app.get("/api/payment/:id", paymentControllers.listOne);
+app.post("/api/payment", paymentControllers.create);
+app.patch("/api/payment/:id", paymentControllers.update);
+app.delete("/api/payment/:id", paymentControllers.deletePayment);
+
 
 //Rutas de category
 app.get("/api/category", categoryControllers.categoryList);
