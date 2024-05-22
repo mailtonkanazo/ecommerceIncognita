@@ -2,7 +2,7 @@ import "dotenv/config";
 
 import productsControllers from "./controllers/productsControllers.js";
 import categoryControllers from "./controllers/categoryControllers.js";
-
+import purchasesControllers from "./controllers/purchasesControllers.js";
 import express from "express";
 import Product from "./models/Product.js";
 
@@ -22,6 +22,11 @@ app.get("/api/product/:id", productsControllers.listOne);
 app.post("/api/product", productsControllers.create);
 app.patch("/api/product/:id", productsControllers.update);
 app.delete("/api/product/:id", productsControllers.deleteProduct);
+
+//rutas de purchases
+app.get("/api/purchases", purchasesControllers.list);
+app.post("/api/purchases", purchasesControllers.create);
+
 
 //Rutas de category
 app.get("/api/category", categoryControllers.categoryList);
