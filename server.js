@@ -6,18 +6,13 @@ import purchasesControllers from "./controllers/purchasesControllers.js";
 import adminControllers from "./controllers/adminControllers.js";
 import paymentControllers from "./controllers/paymentControllers.js";
 import express from "express";
-import { expressjwt } from "express-jwt";
-import Product from "./models/Product.js";
+//import Product from "./models/Product.js";
 import usersControllers from "./controllers/usersControllers.js";
 
 const app = express();
 
-function middlewareApplication(req, res) {
-  console.log("Hey, recibimos tu pedido");
-}
-
 app.use(express.json());
-//app.use(middlewareApplication);
+
 
 //Rutas de admin
 app.get("/api/admin", adminControllers.list);
