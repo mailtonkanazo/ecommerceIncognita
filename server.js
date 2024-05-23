@@ -3,18 +3,21 @@ import "dotenv/config";
 import productsControllers from "./controllers/productsControllers.js";
 import categoryControllers from "./controllers/categoryControllers.js";
 import purchasesControllers from "./controllers/purchasesControllers.js";
+import adminControllers from "./controllers/adminControllers.js";
+import paymentControllers from "./controllers/paymentControllers.js";
 import express from "express";
+import { expressjwt } from "express-jwt";
 import Product from "./models/Product.js";
 import usersControllers from "./controllers/usersControllers.js";
 
 const app = express();
 
 function middlewareApplication(req, res) {
-  console.log("Hey, recibimos tu pedido") 
+  console.log("Hey, recibimos tu pedido");
 }
 
 app.use(express.json());
-app.use(middlewareApplication);
+//app.use(middlewareApplication);
 
 //Rutas de admin
 app.get("/api/admin", adminControllers.list);
@@ -50,10 +53,17 @@ app.delete("/api/payment/:id", paymentControllers.deletePayment);
 
 //Rutas de category
 app.get("/api/category", categoryControllers.categoryList);
+app.get("/api/category/:id", categoryControllers.listOne);
 app.post("/api/category", categoryControllers.categoryCreate);
+app.patch("/api/category/:id", categoryControllers.update);
+app.delete("/api/category/:id", categoryControllers.deleteCategory);
 
-//Ruta Privada
-app.post("/api7product/profile", expressjwt({ algoritmos: ["HS256"], secret: process.env.JWT_SECRET}), userController.profile);
+//Ruta Privada (dejé esta ruta comentada mientras terminamos el resto)
+// app.post(
+//   "/api7product/profile",
+//   expressjwt({ algoritmos: ["HS256"], secret: process.env.JWT_SECRET }),
+//   userController.profile
+// );
 
 app.listen(3000, () => {
   console.log("servidor corriendo en el puerto 3000");
