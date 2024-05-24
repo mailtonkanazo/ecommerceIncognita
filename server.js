@@ -42,7 +42,10 @@ app.delete("/api/product/:id", productsControllers.deleteProduct);
 
 //rutas de purchases
 app.get("/api/purchases", purchasesControllers.list);
+app.get("/api/purchases/:id", purchasesControllers.listOne);
 app.post("/api/purchases", purchasesControllers.create);
+app.patch("/api/purchases/:id", purchasesControllers.update);
+app.delete("/api/purchases/:id", purchasesControllers.deletePurchase);
 
 //Rutas de payment
 app.get("/api/payment", paymentControllers.list);
