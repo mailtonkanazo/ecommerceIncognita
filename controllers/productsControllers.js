@@ -1,4 +1,4 @@
-import Product from "../models/Product.js";
+ import Product from "../models/Product.js";
 
 //Solicitar lista de todos los productos
 async function list(req, res) {
