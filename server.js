@@ -18,6 +18,7 @@ app.use(express.json());
 app.get("/api/admin", adminControllers.list);
 app.get("/api/admin/:id", adminControllers.listOne);
 app.post("/api/admin", adminControllers.create);
+app.post("/api/admin/login", adminControllers.login);
 app.patch("/api/admin/:id", adminControllers.update);
 app.delete("/api/admin/:id", adminControllers.deleteAdmin);
 
@@ -25,6 +26,7 @@ app.delete("/api/admin/:id", adminControllers.deleteAdmin);
 app.get("/api/users", usersControllers.list);
 app.get("/api/users/:id", usersControllers.listOne);
 app.post("/api/users", usersControllers.create);
+app.post("/api/users/login", usersControllers.login);
 app.patch("/api/users/:id", usersControllers.update);
 app.delete("/api/users/:id", usersControllers.deleteUsers);
 

@@ -1,4 +1,6 @@
+import bcrypt from "bcryptjs";
 import Users from "../models/users.js";
+import { json } from "express";
 
 //Solicitar lista de todos los usuarios
 async function list(req, res) {
@@ -23,13 +25,16 @@ async function listOne(req, res) {
 
 //añadir un usuario
 async function create(req, res) {
-  try {
+    try {
+    const contrasenia = req.body.password;
+    const hash = await bcrypt.hash(contrasenia, 10);
+
     const newUsers = await Users.create({
       name: req.body.name,
       lastname: req.body.lastname,
       identification: req.body.identification,
       email: req.body.email,
-      password: req.body.password,
+      password: hash,
       address: req.body.address,
       movil: req.body.movil,
       authorized: req.body.authorized,
@@ -72,10 +77,30 @@ async function deleteUsers(req, res) {
   }
 }
 
+async function login(req, res) {
+  try {
+  const users = await Users.findOne({ email: req.body.email });
+  
+  if(users !== null) {
+    const hashValido = await bcrypt.compare(req.body.password, users.password);
+    if(hashValido) {
+      res.json("Tus credenciales son validas");
+    } else {
+      res.json("Tus credenciales no son validas");
+    }
+  } else {
+    res.json("El usuario no existe");
+  }
+ } catch (err) {
+  res.status(500).json("Internal Server Error");
+ }
+}
+
 export default {
   list,
   listOne,
   create,
   update,
   deleteUsers,
+  login,
 };

@@ -1,3 +1,4 @@
+import bcrypt from "bcryptjs";
 import Admin from "../models/admin.js";
 
 //Solicitar lista de todos los administradores
@@ -24,12 +25,15 @@ async function listOne(req, res) {
 //añadir un administrador
 async function create(req, res) {
   try {
+    const contrasenia = req.body.password;
+    const hash = await bcrypt.hash(contrasenia, 10);
+
     const newAdmin = await Admin.create({
       name: req.body.name,
       lastname: req.body.lastname,
       identification: req.body.identification,
       email: req.body.email,
-      password: req.body.password,
+      password: hash,
       movil: req.body.movil,
       authorized: req.body.authorized,
     });
@@ -70,10 +74,30 @@ async function deleteAdmin(req, res) {
   }
 }
 
+async function login(req, res) {
+  try {
+  const admin = await Admin.findOne({ email: req.body.email });
+  
+  if(admin !== null) {
+    const hashValido = await bcrypt.compare(req.body.password, admin.password);
+    if(hashValido) {
+      res.json("Tus credenciales son validas")
+    } else {
+      res.json("Tus credenciales no son validas")
+    }
+  } else {
+    res.json("El administrador no existe");
+  }
+} catch (err) {
+  res.status(500).json("Internal Server Error");
+ }
+}
+
 export default {
   list,
   listOne,
   create,
   update,
   deleteAdmin,
+  login,
 };
