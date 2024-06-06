@@ -23,7 +23,7 @@ app.post("/api/admin/login", adminControllers.login);
 app.patch("/api/admin/:id", adminControllers.update);
 app.delete("/api/admin/:id", adminControllers.deleteAdmin);
 //Ruta privada
-app.post("/api/admin/profile", expressjwt({ algorithms: ["HS256"], secret: "eseStringUltraSecretop123" }), adminControllers.profile);
+app.post("/api/admin/profile", expressjwt({ algorithms: ["HS256"], secret: process.env.JWT_SECRET }), adminControllers.profile);
 
 //Rutas de users
 app.get("/api/users", usersControllers.list);
@@ -33,7 +33,7 @@ app.post("/api/users/login", usersControllers.login);
 app.patch("/api/users/:id", usersControllers.update);
 app.delete("/api/users/:id", usersControllers.deleteUsers);
 //Ruta privada
-app.post("/api/users/profile", expressjwt, usersControllers.profile);
+app.post("/api/users/profile", expressjwt({ algorithms: ["HS256"], secret: process.env.JWT_SECRET }), usersControllers.profile);
 
 //Rutas de product
 app.get("/api/product", productsControllers.list);

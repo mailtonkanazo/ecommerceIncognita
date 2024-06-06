@@ -86,7 +86,7 @@ async function login(req, res) {
         sub: admin.id,
         iat: Date.now(),
       };
-      const token = jwt.sign(tokenPayload, "eseStringUltraSecretop123");
+      const token = jwt.sign(tokenPayload, process.env.JWT_TOKEN);
       res.json({ token: token });
     } else {
       res.json("Tus credenciales no son validas")
