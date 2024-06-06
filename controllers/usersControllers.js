@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken"
 import Users from "../models/users.js";
-import { json } from "express";
+
 
 //Solicitar lista de todos los usuarios
 async function list(req, res) {
@@ -84,7 +85,13 @@ async function login(req, res) {
   if(users !== null) {
     const hashValido = await bcrypt.compare(req.body.password, users.password);
     if(hashValido) {
-      res.json("Tus credenciales son validas");
+      //Aqui valida el token
+      const tokenPayload = {
+        sub: users.id,
+        iat: Date.now(),
+      };
+      const token = jwt.sign(tokenPayload, "eseStringUltraSecretop123");
+      res.json({ token: token }); 
     } else {
       res.json("Tus credenciales no son validas");
     }
@@ -96,6 +103,11 @@ async function login(req, res) {
  }
 }
 
+async function profile(req, res) {
+  const { email } = await Users.findById(req.auth.sub);
+  res.json(`Hola ${email}, te damos acceso a tu perfil`)
+}
+
 export default {
   list,
   listOne,
@@ -103,4 +115,5 @@ export default {
   update,
   deleteUsers,
   login,
+  profile,
 };

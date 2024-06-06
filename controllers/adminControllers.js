@@ -81,7 +81,13 @@ async function login(req, res) {
   if(admin !== null) {
     const hashValido = await bcrypt.compare(req.body.password, admin.password);
     if(hashValido) {
-      res.json("Tus credenciales son validas")
+      //Aqui valida el token
+      const tokenPayload = {
+        sub: admin.id,
+        iat: Date.now(),
+      };
+      const token = jwt.sign(tokenPayload, "eseStringUltraSecretop123");
+      res.json({ token: token });
     } else {
       res.json("Tus credenciales no son validas")
     }
@@ -93,6 +99,11 @@ async function login(req, res) {
  }
 }
 
+async function profile(req, res) {
+  const { email } = await Admin.findById(req.auth.sub);
+  res.json(`Hola ${email}, te damos acceso a tu perfil`)
+}
+
 export default {
   list,
   listOne,
@@ -100,4 +111,5 @@ export default {
   update,
   deleteAdmin,
   login,
+  profile,
 };

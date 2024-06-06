@@ -1,5 +1,6 @@
 import "dotenv/config";
 
+import { expressjwt } from "express-jwt";
 import productsControllers from "./controllers/productsControllers.js";
 import categoryControllers from "./controllers/categoryControllers.js";
 import purchasesControllers from "./controllers/purchasesControllers.js";
@@ -21,6 +22,8 @@ app.post("/api/admin", adminControllers.create);
 app.post("/api/admin/login", adminControllers.login);
 app.patch("/api/admin/:id", adminControllers.update);
 app.delete("/api/admin/:id", adminControllers.deleteAdmin);
+//Ruta privada
+app.post("/api/admin/profile", expressjwt({ algorithms: ["HS256"], secret: "eseStringUltraSecretop123" }), adminControllers.profile);
 
 //Rutas de users
 app.get("/api/users", usersControllers.list);
@@ -29,6 +32,8 @@ app.post("/api/users", usersControllers.create);
 app.post("/api/users/login", usersControllers.login);
 app.patch("/api/users/:id", usersControllers.update);
 app.delete("/api/users/:id", usersControllers.deleteUsers);
+//Ruta privada
+app.post("/api/users/profile", expressjwt, usersControllers.profile);
 
 //Rutas de product
 app.get("/api/product", productsControllers.list);
@@ -58,12 +63,6 @@ app.post("/api/category", categoryControllers.categoryCreate);
 app.patch("/api/category/:id", categoryControllers.update);
 app.delete("/api/category/:id", categoryControllers.deleteCategory);
 
-//Ruta Privada (dejé esta ruta comentada mientras terminamos el resto)
-// app.post(
-//   "/api7product/profile",
-//   expressjwt({ algoritmos: ["HS256"], secret: process.env.JWT_SECRET }),
-//   userController.profile
-// );
 
 app.listen(3000, () => {
   console.log("servidor corriendo en el puerto 3000");
