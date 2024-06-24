@@ -1,4 +1,4 @@
- import Product from "../models/Product.js";
+import Product from "../models/Product.js";
 
 //Solicitar lista de todos los productos
 async function list(req, res) {
@@ -32,6 +32,7 @@ async function create(req, res) {
       color: req.body.color,
       stock: req.body.stock,
       price: req.body.price,
+      image: req.body.image,
     });
     res.json(newProduct);
   } catch (err) {

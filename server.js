@@ -8,9 +8,11 @@ import adminControllers from "./controllers/adminControllers.js";
 import paymentControllers from "./controllers/paymentControllers.js";
 import express from "express";
 import usersControllers from "./controllers/usersControllers.js";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 console.log("JWT_SECRET:", process.env.JWT_SECRET); // Agregado para depuración
@@ -74,4 +76,3 @@ app.delete("/api/category/:id", categoryControllers.deleteCategory);
 app.listen(3000, () => {
   console.log("servidor corriendo en el puerto 3000");
 });
-
