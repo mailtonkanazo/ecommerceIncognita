@@ -9,7 +9,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
-  image:"camisaNegraMLHombre.png"
+  image: "camisaNegraMLHombre.png"
 });
 
 await Product.create({
@@ -39,10 +39,10 @@ await Product.create({
   description: "Manga larga",
   size: "Talla S",
   ref: 252526,
-  color: "Beis",
+  color: "Beige",
   stock: 12,
   price: 50,
-  image:"camisaBeisMLHombre.png"
+  image:"camisaBeigeMLHombre.png"
 });
 
 await Product.create({
@@ -50,10 +50,10 @@ await Product.create({
   description: "Manga larga",
   size: "Talla M",
   ref: 252526,
-  color: "Beis",
+  color: "Beige",
   stock: 12,
   price: 50,
-  image:"camisaBeisMLHombre.png"
+  image:"camisaBeigeMLHombre.png"
 });
 
 await Product.create({
@@ -61,10 +61,10 @@ await Product.create({
   description: "Manga larga",
   size: "Talla L",
   ref: 252526,
-  color: "Beis",
+  color: "Beige",
   stock: 12,
   price: 50,
-  image:"camisaBeisMLHombre.png"
+  image:"camisaBeigeMLHombre.png"
 });
 
 await Product.create({
@@ -173,10 +173,10 @@ await Product.create({
   description: "Manga Corta",
   size: "Talla S",
   ref: 232325,
-  color: "Beis",
+  color: "Beige",
   stock: 12,
   price: 50,
-  image:"camisaBeisMCHombre.png"
+  image:"camisaBeigeMCHombre.png"
 });
 
 await Product.create({
@@ -184,10 +184,10 @@ await Product.create({
   description: "Manga Corta",
   size: "Talla M",
   ref: 232325,
-  color: "Beis",
+  color: "Beige",
   stock: 12,
   price: 50,
-  image:"camisaBeisMCHombre.png"
+  image:"camisaBeigeMCHombre.png"
 });
 
 await Product.create({
@@ -195,10 +195,10 @@ await Product.create({
   description: "Manga Corta",
   size: "Talla L",
   ref: 232325,
-  color: "Beis",
+  color: "Beige",
   stock: 12,
   price: 50,
-  image:"camisaBeisMCHombre.png"
+  image:"camisaBeigeMCHombre.png"
 });
 
 //camisas de Mujer--------------
@@ -884,7 +884,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatoNegroSPHombre.png"
+  image:"zapatillaNegroSPHombre.png"
 });
 
 await Product.create({
@@ -895,7 +895,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatoNegroSPHombre.png"
+  image:"zapatillaNegroSPHombre.png"
 });
 
 await Product.create({
@@ -906,7 +906,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatoNegroSPHombre.png"
+  image:"zapatillaNegroSPHombre.png"
 });
 
 await Product.create({
@@ -917,7 +917,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
-  image:"zapatoBlancoSPHombre.png"
+  image:"zapatillaBlancaSPHombre.png"
 });
 
 await Product.create({
@@ -928,7 +928,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
-  image:"zapatoBlancoSPHombre.png"
+   image:"zapatillaBlancaSPHombre.png"
 });
 
 await Product.create({
@@ -939,7 +939,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
-  image:"zapatoBlancoSPHombre.png"
+   image:"zapatillaBlancaSPHombre.png"
 });
 
 //zapato para mujer-------------------
@@ -952,7 +952,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatillaNegroSPMujer.png"
+  image:"taconNegroELMujer.png"
 });
 
 await Product.create({
@@ -963,7 +963,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatillaNegroSPMujer.png"
+  image:"taconNegroELMujer.png"
 });
 
 await Product.create({
@@ -974,7 +974,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatillaNegroSPMujer.png"
+  image:"taconNegroELMujer.png"
 });
 
 await Product.create({
@@ -985,7 +985,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
-  image:"zapatillaBlancoSPMujer.png"
+  image:"taconBlancoELMujer.png"
 });
 
 await Product.create({
@@ -996,7 +996,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
-  image:"zapatillaBlancoSPMujer.png"
+   image:"taconBlancoELMujer.png"
 });
 
 await Product.create({
@@ -1007,7 +1007,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
-  image:"zapatillaBlancoSPMujer.png"
+ image:"taconBlancoELMujer.png"
 });
 
 //-------------------------------
@@ -1020,7 +1020,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatillaNeconBISPMujer.png"
+  image:"zapatillaNegroDPMujer.png"
 });
 
 await Product.create({
@@ -1031,7 +1031,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatillaNeconBISPMujer.png"
+  image:"zapatillaNegroDPMujer.png"
 });
 
 await Product.create({
@@ -1042,7 +1042,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
-  image:"zapatillaNeconBISPMujer.png"
+  image:"zapatillaNegroDPMujer.png"
 });
 
 await Product.create({
