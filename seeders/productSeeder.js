@@ -9,6 +9,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMLHombre.png"
 });
 
 await Product.create({
@@ -19,6 +20,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMLHombre.png"
 });
 
 await Product.create({
@@ -29,6 +31,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMLHombre.png"
 });
 
 await Product.create({
@@ -36,9 +39,10 @@ await Product.create({
   description: "Manga larga",
   size: "Talla S",
   ref: 252526,
-  color: "Gris",
+  color: "Beis",
   stock: 12,
   price: 50,
+  image:"camisaBeisMLHombre.png"
 });
 
 await Product.create({
@@ -46,9 +50,10 @@ await Product.create({
   description: "Manga larga",
   size: "Talla M",
   ref: 252526,
-  color: "Gris",
+  color: "Beis",
   stock: 12,
   price: 50,
+  image:"camisaBeisMLHombre.png"
 });
 
 await Product.create({
@@ -56,9 +61,10 @@ await Product.create({
   description: "Manga larga",
   size: "Talla L",
   ref: 252526,
-  color: "Gris",
+  color: "Beis",
   stock: 12,
   price: 50,
+  image:"camisaBeisMLHombre.png"
 });
 
 await Product.create({
@@ -69,6 +75,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancoMLHombre.png"
 });
 
 await Product.create({
@@ -79,6 +86,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancoMLHombre.png"
 });
 
 await Product.create({
@@ -89,6 +97,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancoMLHombre.png"
 });
 
 //-------------------------------------------
@@ -101,6 +110,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMCHombre.png"
 });
 
 await Product.create({
@@ -111,6 +121,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMCHombre.png"
 });
 
 await Product.create({
@@ -121,6 +132,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMCHombre.png"
 });
 
 await Product.create({
@@ -131,6 +143,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancoMCHombre.png"
 });
 
 await Product.create({
@@ -141,6 +154,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancoMCHombre.png"
 });
 
 await Product.create({
@@ -151,6 +165,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancoMCHombre.png"
 });
 
 await Product.create({
@@ -161,6 +176,7 @@ await Product.create({
   color: "Beis",
   stock: 12,
   price: 50,
+  image:"camisaBeisMCHombre.png"
 });
 
 await Product.create({
@@ -171,6 +187,7 @@ await Product.create({
   color: "Beis",
   stock: 12,
   price: 50,
+  image:"camisaBeisMCHombre.png"
 });
 
 await Product.create({
@@ -181,6 +198,7 @@ await Product.create({
   color: "Beis",
   stock: 12,
   price: 50,
+  image:"camisaBeisMCHombre.png"
 });
 
 //camisas de Mujer--------------
@@ -193,6 +211,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMLMujer.png"
 });
 
 await Product.create({
@@ -203,6 +222,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMLMujer.png"
 });
 
 await Product.create({
@@ -213,6 +233,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+  image:"camisaNegraMLMujer.png"
 });
 
 await Product.create({
@@ -223,6 +244,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancaMLMujer.png"
 });
 
 await Product.create({
@@ -233,6 +255,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancaMLMujer.png"
 });
 
 await Product.create({
@@ -243,6 +266,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancaMLMujer.png"
 });
 
 await Product.create({
@@ -253,6 +277,7 @@ await Product.create({
   color: "Rosado",
   stock: 12,
   price: 50,
+  image:"camisaRosaMLMujer.png"
 });
 
 await Product.create({
@@ -263,6 +288,7 @@ await Product.create({
   color: "Rosado",
   stock: 12,
   price: 50,
+   image:"camisaRosaMLMujer.png"
 });
 
 await Product.create({
@@ -273,6 +299,7 @@ await Product.create({
   color: "Rosado",
   stock: 12,
   price: 50,
+   image:"camisaRosaMLMujer.png"
 });
 
 //-----------------------------
@@ -285,6 +312,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+   image:"camisaNegraMCMujer.png"
 });
 
 await Product.create({
@@ -295,6 +323,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+   image:"camisaNegraMCMujer.png"
 });
 
 await Product.create({
@@ -305,6 +334,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
+   image:"camisaNegraMCMujer.png"
 });
 
 await Product.create({
@@ -315,6 +345,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+   image:"camisaBlancaMCMujer.png"
 });
 
 await Product.create({
@@ -325,6 +356,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancaMCMujer.png"
 });
 
 await Product.create({
@@ -335,6 +367,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 50,
+  image:"camisaBlancaMCMujer.png"
 });
 
 await Product.create({
@@ -345,6 +378,7 @@ await Product.create({
   color: "Rosado",
   stock: 12,
   price: 50,
+  image:"camisaRosaMCMujer.png"
 });
 
 await Product.create({
@@ -355,6 +389,7 @@ await Product.create({
   color: "Rosado",
   stock: 12,
   price: 50,
+  image:"camisaRosaMCMujer.png"
 });
 
 await Product.create({
@@ -365,6 +400,7 @@ await Product.create({
   color: "Rosado",
   stock: 12,
   price: 50,
+  image:"camisaRosaMCMujer.png"
 });
 
 //Pantalones de Caballero-------------
@@ -377,6 +413,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroELHombre.png"
 });
 
 await Product.create({
@@ -387,6 +424,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+   image:"pantalonNegroELHombre.png"
 });
 
 await Product.create({
@@ -397,6 +435,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+   image:"pantalonNegroELHombre.png"
 });
 
 await Product.create({
@@ -407,6 +446,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+   image:"pantalonBlancoSPHombre.png"
 });
 
 await Product.create({
@@ -417,6 +457,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoSPHombre.png"
 });
 
 await Product.create({
@@ -427,6 +468,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoSPHombre.png"
 });
 
 await Product.create({
@@ -437,6 +479,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulSPHombre.png"
 });
 
 await Product.create({
@@ -447,6 +490,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulSPHombre.png"
 });
 
 await Product.create({
@@ -457,6 +501,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulSPHombre.png"
 });
 
 //----------------------------
@@ -469,6 +514,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroSPHombre.png"
 });
 
 await Product.create({
@@ -479,6 +525,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+   image:"pantalonNegroSPHombre.png"
 });
 
 await Product.create({
@@ -489,6 +536,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+   image:"pantalonNegroSPHombre.png"
 });
 
 await Product.create({
@@ -499,6 +547,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+   image:"pantalonBlancoELHombre.png"
 });
 
 await Product.create({
@@ -509,6 +558,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+   image:"pantalonBlancoELHombre.png"
 });
 
 await Product.create({
@@ -519,6 +569,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+   image:"pantalonBlancoELHombre.png"
 });
 
 await Product.create({
@@ -529,6 +580,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+   image:"pantalonAzulELHombre.png"
 });
 
 await Product.create({
@@ -539,6 +591,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulELHombre.png"
 });
 
 await Product.create({
@@ -549,6 +602,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulELHombre.png"
 });
 
 //Pantalon de Mujer--------------
@@ -561,6 +615,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulSPMujer.png"
 });
 
 await Product.create({
@@ -571,6 +626,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulSPMujer.png"
 });
 
 await Product.create({
@@ -581,6 +637,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulSPMujer.png"
 });
 await Product.create({
   name: "Pantalon de Mujer",
@@ -590,6 +647,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoSPMujer.png"
 });
 
 await Product.create({
@@ -600,6 +658,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoSPMujer.png"
 });
 
 await Product.create({
@@ -610,6 +669,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoSPMujer.png"
 });
 
 await Product.create({
@@ -620,6 +680,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroSPMujer.png"
 });
 
 await Product.create({
@@ -630,6 +691,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroSPMujer.png"
 });
 
 await Product.create({
@@ -640,6 +702,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroSPMujer.png"
 });
 
 //-----------------------------
@@ -652,6 +715,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroELMujer.png"
 });
 
 await Product.create({
@@ -662,6 +726,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroELMujer.png"
 });
 
 await Product.create({
@@ -672,6 +737,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 70,
+  image:"pantalonNegroELMujer.png"
 });
 
 await Product.create({
@@ -682,6 +748,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoELMujer.png"
 });
 
 await Product.create({
@@ -692,6 +759,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoELMujer.png"
 });
 
 await Product.create({
@@ -702,6 +770,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 70,
+  image:"pantalonBlancoELMujer.png"
 });
 
 await Product.create({
@@ -712,6 +781,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulELMujer.png"
 });
 
 await Product.create({
@@ -722,6 +792,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulELMujer.png"
 });
 
 await Product.create({
@@ -732,6 +803,7 @@ await Product.create({
   color: "Azul",
   stock: 12,
   price: 70,
+  image:"pantalonAzulELMujer.png"
 });
 
 //Zapatos Hombre---------------
@@ -744,6 +816,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatoNegroElHombre.png"
 });
 
 await Product.create({
@@ -754,6 +827,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatoNegroElHombre.png"
 });
 
 await Product.create({
@@ -764,6 +838,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatoNegroElHombre.png"
 });
 
 await Product.create({
@@ -774,6 +849,7 @@ await Product.create({
   color: "Miel",
   stock: 12,
   price: 90,
+  image:"zapatoCafeElHombre.png"
 });
 
 await Product.create({
@@ -784,6 +860,7 @@ await Product.create({
   color: "Miel",
   stock: 12,
   price: 90,
+  image:"zapatoCafeElHombre.png"
 });
 
 await Product.create({
@@ -794,6 +871,7 @@ await Product.create({
   color: "Miel",
   stock: 12,
   price: 90,
+  image:"zapatoCafeElHombre.png"
 });
 
 //-------------------------------
@@ -806,6 +884,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatoNegroSPHombre.png"
 });
 
 await Product.create({
@@ -816,6 +895,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatoNegroSPHombre.png"
 });
 
 await Product.create({
@@ -826,6 +906,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatoNegroSPHombre.png"
 });
 
 await Product.create({
@@ -836,6 +917,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatoBlancoSPHombre.png"
 });
 
 await Product.create({
@@ -846,6 +928,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatoBlancoSPHombre.png"
 });
 
 await Product.create({
@@ -856,6 +939,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatoBlancoSPHombre.png"
 });
 
 //zapato para mujer-------------------
@@ -868,6 +952,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatillaNegroSPMujer.png"
 });
 
 await Product.create({
@@ -878,6 +963,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatillaNegroSPMujer.png"
 });
 
 await Product.create({
@@ -888,6 +974,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatillaNegroSPMujer.png"
 });
 
 await Product.create({
@@ -898,6 +985,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatillaBlancoSPMujer.png"
 });
 
 await Product.create({
@@ -908,6 +996,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatillaBlancoSPMujer.png"
 });
 
 await Product.create({
@@ -918,6 +1007,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatillaBlancoSPMujer.png"
 });
 
 //-------------------------------
@@ -930,6 +1020,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatillaNeconBISPMujer.png"
 });
 
 await Product.create({
@@ -940,6 +1031,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatillaNeconBISPMujer.png"
 });
 
 await Product.create({
@@ -950,6 +1042,7 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 90,
+  image:"zapatillaNeconBISPMujer.png"
 });
 
 await Product.create({
@@ -960,6 +1053,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatillaBlconNesPMujer.png"
 });
 
 await Product.create({
@@ -970,6 +1064,7 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatillaBlconNesPMujer.png"
 });
 
 await Product.create({
@@ -980,4 +1075,5 @@ await Product.create({
   color: "Blanco",
   stock: 12,
   price: 90,
+  image:"zapatillaBlconNesPMujer.png"
 });

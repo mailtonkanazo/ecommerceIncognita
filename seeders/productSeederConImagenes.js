@@ -10,8 +10,8 @@ await Product.create({
   color: "Negro",
   stock: 12,
   price: 50,
-  image:
-    "https://jumbocolombiaio.vtexassets.com/arquivos/ids/212519-800-800?v=637814233252000000&width=800&height=800&aspect=true",
+  image:"camisaNegraMLHombre.png"
+    
 });
 
 await Product.create({
