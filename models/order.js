@@ -20,6 +20,7 @@ const orderSchema = moongose.Schema({
     cardnumber: Number,
     expirationdate: String,
     securitycode: Number,
+    address: String,
 });
 
 const Order = moongose.model("Order", orderSchema);

@@ -36,7 +36,6 @@ async function create(req, res) {
       identification: req.body.identification,
       email: req.body.email,
       password: hash,
-      address: req.body.address,
       movil: req.body.movil,
       authorized: req.body.authorized,
     });
@@ -56,7 +55,6 @@ async function update(req, res) {
     usersModified.identification = req.body.identification || usersModified.identification;
     usersModified.email = req.body.email || usersModified.email;
     usersModified.password = req.body.password || usersModified.password;
-    usersModified.address = req.body.address || usersModified.address;
     usersModified.movil = req.body.movil || usersModified.movil;
     usersModified.authorized = req.body.authorized || usersModified.authorized;
 

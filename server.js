@@ -74,6 +74,7 @@ app.post("/api/category", categoryControllers.categoryCreate);
 app.patch("/api/category/:id", categoryControllers.update);
 app.delete("/api/category/:id", categoryControllers.deleteCategory);
 
+
 app.listen(3000, () => {
   console.log("servidor corriendo en el puerto 3000");
 });

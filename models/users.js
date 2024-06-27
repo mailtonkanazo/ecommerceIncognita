@@ -14,7 +14,6 @@ const usersSchema = mongoose.Schema({
     type: String,
     match: /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{6,}$/,
   },
-  address: String,
   movil: Number,
   authorized: Boolean,
 });

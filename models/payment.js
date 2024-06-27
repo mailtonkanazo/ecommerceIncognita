@@ -5,6 +5,7 @@ const paymentSchema = mongoose.Schema({
   cardnumber: Number,
   expirationdate: String,
   securitycode: Number,
+  
   //Billing Information ------
 });
 
