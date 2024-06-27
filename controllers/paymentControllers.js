@@ -27,7 +27,7 @@ async function create(req, res) {
     const newPayment = await Payment.create({
       paymentmethod: req.body.paymentmethod,
       cardnumber: req.body.cardnumber,
-      dateofexpiry: req.body.dateofexpiry,
+      expirationdate: req.body.expirationdate,
       securitycode: req.body.securitycode,
     });
     res.json(newPayment);
@@ -43,7 +43,7 @@ async function update(req, res) {
     const paymentModified = await Payment.findById(req.params.id);
     paymentModified.paymentmethod = req.body.paymentmethod || paymentModified.paymentmethod;
     paymentModified.cardnumber = req.body.cardnumber || paymentModified.cardnumber;
-    paymentModified.dateofexpiry = req.body.dateofexpiry || paymentModified.dateofexpiry;
+    paymentModified.expirationdate = req.body.expirationdate || paymentModified.expirationdate;
     paymentModified.securitycode = req.body.securitycode || paymentModified.securitycode;
 
     await paymentModified.save();

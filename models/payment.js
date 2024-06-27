@@ -3,7 +3,7 @@ import mongoose from "../config/mongoose.config.js";
 const paymentSchema = mongoose.Schema({
   paymentmethod: String,
   cardnumber: Number,
-  dateofexpiry: String,
+  expirationdate: String,
   securitycode: Number,
   //Billing Information ------
 });
