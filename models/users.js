@@ -1,6 +1,6 @@
 import mongoose from "../config/mongoose.config.js";
 
-const usersSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
     
   name: String,
   lastname: String,
@@ -16,8 +16,26 @@ const usersSchema = mongoose.Schema({
   },
   movil: Number,
   authorized: Boolean,
+}, {
+  methods: {
+    async hashCompare(string) {
+      return bcrypt.compare(string, this.password)
+    }
+  }
 });
 
-const Users = mongoose.model("user", usersSchema);
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+
+  try {
+    const hash = await bcrypt.hash(this.password, 10);
+    this.password = hash;
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
+
+const Users = mongoose.model("user", userSchema);
 
 export default Users;

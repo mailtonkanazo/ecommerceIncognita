@@ -25,10 +25,9 @@ async function listOne(req, res) {
 async function create(req, res) {
   try {
     const newPayment = await Payment.create({
-      paymentmethod: req.body.paymentmethod,
-      cardnumber: req.body.cardnumber,
-      expirationdate: req.body.expirationdate,
-      securitycode: req.body.securitycode,
+      cash: req.body.cash,
+      paypal: req.body.paypal,
+      pse: req.body.pse,
     });
     res.json(newPayment);
   } catch (err) {
@@ -41,10 +40,9 @@ async function create(req, res) {
 async function update(req, res) {
   try {
     const paymentModified = await Payment.findById(req.params.id);
-    paymentModified.paymentmethod = req.body.paymentmethod || paymentModified.paymentmethod;
-    paymentModified.cardnumber = req.body.cardnumber || paymentModified.cardnumber;
-    paymentModified.expirationdate = req.body.expirationdate || paymentModified.expirationdate;
-    paymentModified.securitycode = req.body.securitycode || paymentModified.securitycode;
+    paymentModified.cash = req.body.cash || paymentModified.cash;
+    paymentModified.paypal = req.body.paypal || paymentModified.paypal;
+    paymentModified.pse = req.body.pse || paymentModified.pse;
 
     await paymentModified.save();
     res.json(paymentModified);

@@ -10,17 +10,16 @@ async function list(req, res) {
 }
 
 async function create(req, res) {
-    console.log("OK OK OK")
+    console.log("Purchase")
     try {
         const newOrder = await Order.create({
             user: req.auth.id,
             products: req.body.products,
             total: req.body.total,
             paymentMethod: req.body.paymentMethod,
-            cardnumber: req.body.cardnumber,
-            expirationdate: req.body.expirationdate,
-            securitycode: req.body.securitycode,
-            address: req.body.address
+            contactNumber: req.body.contactNumber,
+            address: req.body.address,
+            complement: req.body.complement,
         })
         return res.json(newOrder)
     } catch (err) {

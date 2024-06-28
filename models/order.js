@@ -1,8 +1,8 @@
 import mongoose from "../config/mongoose.config.js";
 
-const orderSchema = moongose.Schema({
+const orderSchema = mongoose.Schema({
     user: {
-        type: moongose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "User",
     },
     products: [
@@ -15,14 +15,15 @@ const orderSchema = moongose.Schema({
         }
     ],
 
-    total: Number,
-    paymentMethod: String,
-    cardnumber: Number,
-    expirationdate: String,
-    securitycode: Number,
+    name: String,
+    contactNumber: Number,
     address: String,
+    complement: String,    
+    paymentMethod: String,
+    total: Number,
+    
 });
 
-const Order = moongose.model("Order", orderSchema);
+const Order = mongoose.model("Order", orderSchema);
 
 export default Order;
