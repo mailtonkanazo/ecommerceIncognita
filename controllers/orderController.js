@@ -13,13 +13,13 @@ async function create(req, res) {
     console.log("Purchase")
     try {
         const newOrder = await Order.create({
-            user: req.auth.id,
             products: req.body.products,
-            total: req.body.total,
-            paymentMethod: req.body.paymentMethod,
+            user: req.auth.id,
             contactNumber: req.body.contactNumber,
             address: req.body.address,
             complement: req.body.complement,
+            total: req.body.total,
+            paymentMethod: req.body.paymentMethod,
         })
         return res.json(newOrder)
     } catch (err) {

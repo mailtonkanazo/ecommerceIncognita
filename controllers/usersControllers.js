@@ -35,7 +35,7 @@ async function create(req, res) {
       lastname: req.body.lastname,
       identification: req.body.identification,
       email: req.body.email,
-      password: hash,
+      password: req.body.password,
       movil: req.body.movil,
       authorized: req.body.authorized,
     });
