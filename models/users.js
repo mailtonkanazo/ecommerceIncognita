@@ -1,29 +1,31 @@
 import mongoose from "../config/mongoose.config.js";
-import bcrypt from "bcryptjs"
+import bcrypt from "bcryptjs";
 
-const userSchema = mongoose.Schema({
-    
-  name: String,
-  lastname: String,
-  identification: Number,
-  email: {
-    type: String,
-    required: true,
-    unique: true,
+const userSchema = mongoose.Schema(
+  {
+    name: String,
+    lastname: String,
+    identification: Number,
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      match:
+        /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{6,}$/,
+    },
+    movil: Number,
   },
-  password: {
-    type: String,
-    match: /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{6,}$/,
-  },
-  movil: Number,
-  authorized: Boolean,
-}, {
-  methods: {
-    async hashCompare(string) {
-      return bcrypt.compare(string, this.password)
-    }
+  {
+    methods: {
+      async hashCompare(string) {
+        return bcrypt.compare(string, this.password);
+      },
+    },
   }
-});
+);
 
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
