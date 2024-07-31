@@ -22,22 +22,25 @@ async function listOne(req, res) {
 }
 
 //crear un producto
+// Crear productos
 async function create(req, res) {
   try {
-    const newProduct = await Product.create({
-      name: req.body.name,
-      description: req.body.description,
-      ref: req.body.ref,
-      size: req.body.size, // caracteristica añadida jct
-      color: req.body.color,
-      stock: req.body.stock,
-      price: req.body.price,
-      image: req.body.image,
-    });
-    res.json(newProduct);
+    // Verificar si el cuerpo de la solicitud es un array
+    if (Array.isArray(req.body)) {
+      // Insertar múltiples productos
+      const newProducts = await Product.insertMany(req.body);
+      res.status(201).json(newProducts);
+    } else {
+      // Si no es un array, devolver un error
+      res
+        .status(400)
+        .json({
+          error: "El cuerpo de la solicitud debe ser un array de productos",
+        });
+    }
   } catch (err) {
     res.status(500).json({ error: "Server Error", message: err.message });
-    console.error("Error al crear el producto:", err);
+    console.error("Error al crear los productos:", err);
   }
 }
 
